@@ -10,17 +10,6 @@ searchBtn.addEventListener("click", ()=>{
     .then(response =>{
         return response.json();
     }).then(data =>{
-        // console.log(data[0]);
-        // console.log(data[0].capital[0]);
-        // console.log(data[0].flags.png);
-        // console.log(data[0].name.common);
-        // console.log(data[0].continents[0]);
-        // console.log(data[0].population);
-        // console.log(Object.keys(data[0].currencies)[0]);
-        // console.log(data[0].currencies[Object.keys(data[0].currencies)].name);
-        // console.log(Object.values(data[0].languages).toString().split(",").join(",")  );
-        
-        
         result.innerHTML = `
             <img src="${data[0].flags.png}"
             class="flag-img">
@@ -56,12 +45,7 @@ searchBtn.addEventListener("click", ()=>{
                     <span>${Object.values(data[0].languages).toString().split(",").join(",")}</span>
                 </div>
             </div>
-
         `;
-
-
-        
-
     });
 });
 
